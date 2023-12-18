@@ -37,7 +37,7 @@ class Visualizer:
 
         self.draw(
             [(train_predictions, "Predictions"), (set_y, "Actual Value")],
-            "X",
-            "Y",
+            "Sample",
+            "Price",
             test_name
         )
