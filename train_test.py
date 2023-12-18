@@ -16,8 +16,14 @@ rnn = RNN(hyperparameters)
 loss_history = rnn.train(train_set, valid_set)
 rnn.save_weights(TRAINED_NETWORK_PATH)
 
-visualizer = Visualizer(3, 2)
+visualizer = Visualizer(4, 2)
 
+visualizer.draw(
+[(loss_history, "Cost Function")],
+    "Sample",
+    "Loss",
+    "Cost Function"
+)
 visualizer.create_chart_set(train_set, rnn, "Post-Training Test")
 visualizer.create_chart_set(valid_set, rnn, "Validation Test")
 visualizer.create_chart_set(test_set, rnn, "New Data Training Test")
