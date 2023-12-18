@@ -26,7 +26,7 @@ class DataAnalyzer:
         data = pd.read_csv(path, index_col=0)
         data = data.ffill()
 
-        data["open"].head(3500)
+        data["open"].tail(3500)
 
         mean_values = np.mean(data[STOCK_PREDICTORS], axis=0)
         std_dev_values = np.std(data[STOCK_PREDICTORS], axis=0)
