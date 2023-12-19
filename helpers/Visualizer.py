@@ -26,7 +26,7 @@ class Visualizer:
     def create_chart_set(self, set, rnn, test_name):
         set_x, set_y = set
         train_hiddens, train_predictions = rnn.forward(set_x)
-        train_history = [mse(y, pred) for y, pred in zip(set_x, train_predictions)]
+        train_history = [mse(y, pred) for y, pred in zip(set_y, train_predictions)]
 
         self.draw(
             [(train_history, "Cost Function")],
